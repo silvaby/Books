@@ -3,7 +3,7 @@
 [![Platform](https://img.shields.io/cocoapods/p/SlideController.svg?style=flat)](http://cocoapods.org/pods/SlideController)
 
 ### Необходимо разработать приложения для iOS, которое использует google books API
-`https://developers.google.com/books` для поиска и получения списка книг по автору и/или названию книги.
+https://developers.google.com/books для поиска и получения списка книг по автору и/или названию книги.
 
 В приложении должна быть возможность ввести название книги и отобразить список найденных книг в `UITableView`. 
 
