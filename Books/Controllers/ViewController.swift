@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class ViewController: UIViewController {
     
@@ -26,7 +27,7 @@ class ViewController: UIViewController {
     // MARK: - Download books using google books API
     func downloadBooks(booksTitle: String) {
         
-        let stringURL = "https://www.googleapis.com/books/v1/volumes?q=\(booksTitle)".encodeUrl
+        let stringURL = "https://www.googleapis.com/books/v1/volumes?q=\(booksTitle)&maxResults=40".encodeUrl
         
         guard let url = URL(string: stringURL) else {
             print("URL problem")
@@ -44,7 +45,6 @@ class ViewController: UIViewController {
 
                 if let items = json.items {
                     self.books = items
-                    print(items)
                 } else { print("Error conection to google books API. Change your region!") }
 
                 DispatchQueue.main.async {
@@ -84,7 +84,8 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
             } else { cell.pageCountOfBook?.text = "No info about page count" }
 
             if let imageURL = volumeInfo.imageLinks?.thumbnail {
-                cell.thumbnailOfBook.downloaded(from: imageURL)
+                let url = URL(string: imageURL)
+                cell.thumbnailOfBook.sd_setImage(with: url, placeholderImage: #imageLiteral(resourceName: "open-book"), options: .scaleDownLargeImages, completed: nil)
             } else { print("No image") }
 
         } else { print("No volumeInfo") }
