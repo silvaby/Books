@@ -15,13 +15,5 @@ class CustomTableViewCell: UITableViewCell {
     @IBOutlet weak var authorsOfBook: UILabel!
     @IBOutlet weak var pageCountOfBook: UILabel!
     @IBOutlet weak var thumbnailOfBook: UIImageView!
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-    }
 
 }

@@ -99,9 +99,10 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
 extension ViewController: UISearchBarDelegate {
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        let bookTitle = searchBar.text!.removingPercentEncoding
+        if let booksTitle = searchBar.text {
+            self.downloadBooks(booksTitle: booksTitle)
+        } else { print("Problem with text in SearchBar") }
         
-        self.downloadBooks(booksTitle: bookTitle!)
         searchBar.resignFirstResponder()
     }
 }
