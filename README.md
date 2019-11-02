@@ -25,7 +25,7 @@ https://developers.google.com/books для поиска и получения с
 2. Download and install SDWebImage (https://github.com/SDWebImage/SDWebImage).
 3. You need an internet connection for the app to work properly.
 4. Change your region before running this application. Select USA or Europe. You can use any free VPN service.
-5. Run the project using the `Books.xcworkspace` file in Book folder.
+5. Run the project using the `Books.xcworkspace` file in Books folder.
 6. Select a simulator iOS device or connect iOS device.
 7. Push "RUN" button. Wait for the app to load in the simulator or device.
 8. Enter a book title in the search bar. Cyrillic available.
