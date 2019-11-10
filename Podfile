@@ -7,5 +7,6 @@ target 'Books' do
 
   # Pods for Books
   pod 'SDWebImage', '~> 5.0'
+  pod 'GoogleSignIn'
 
 end

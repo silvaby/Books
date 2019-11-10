@@ -8,6 +8,7 @@
 
 import UIKit
 import SDWebImage
+import GoogleSignIn
 
 class ViewController: UIViewController {
     
@@ -20,10 +21,13 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         tableView.dataSource = self
         searchBar.delegate = self
+        
+        navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(singOutButtonTapped))
     }
-
+    
     // MARK: - Download books using google books API
     func downloadBooks(booksTitle: String) {
         
@@ -54,6 +58,21 @@ class ViewController: UIViewController {
         }.resume()
     }
     
+    // MARK: - LogOut
+    @objc func singOutButtonTapped() {
+        GIDSignIn.sharedInstance()?.signOut()
+        navigateToLogInScreen()
+    }
+        
+    // MARK: - navigateToLogInScreen
+    private func navigateToLogInScreen() {
+        let mainStoryboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+        
+        guard let logInVC = mainStoryboard.instantiateViewController(withIdentifier: "SignInViewController") as? SignInViewController else { return }
+        
+        present(logInVC, animated: true, completion: nil)
+    }
+
 }
 
 // MARK: - Create and configure table
@@ -105,4 +124,5 @@ extension ViewController: UISearchBarDelegate {
         
         searchBar.resignFirstResponder()
     }
+    
 }

@@ -14,6 +14,9 @@
 		4215F920236347A10073BEFF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4215F91F236347A10073BEFF /* Assets.xcassets */; };
 		4215F923236347A10073BEFF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4215F921236347A10073BEFF /* LaunchScreen.storyboard */; };
 		421962322364C07300A97E16 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 421962312364C07300A97E16 /* CustomTableViewCell.swift */; };
+		421BD1652371BF960059CECC /* Credentials.plist in Resources */ = {isa = PBXBuildFile; fileRef = 421BD1642371BF960059CECC /* Credentials.plist */; };
+		4225DDA623762466002D35D1 /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4225DDA523762466002D35D1 /* MainNavigationController.swift */; };
+		4228E4BA23730B7B003E0A02 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4228E4B923730B7B003E0A02 /* SignInViewController.swift */; };
 		426FDAB82366E66900B6440F /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426FDAB72366E66900B6440F /* Book.swift */; };
 		426FDABD2366E7C200B6440F /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426FDABC2366E7C200B6440F /* Extensions.swift */; };
 		A63F43A6DDC7766F42C2B025 /* Pods_Books.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43711E72AA3C924FAD7F06A1 /* Pods_Books.framework */; };
@@ -31,6 +34,9 @@
 		4215F922236347A10073BEFF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4215F924236347A10073BEFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		421962312364C07300A97E16 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
+		421BD1642371BF960059CECC /* Credentials.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Credentials.plist; sourceTree = "<group>"; };
+		4225DDA523762466002D35D1 /* MainNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigationController.swift; sourceTree = "<group>"; };
+		4228E4B923730B7B003E0A02 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		426FDAB72366E66900B6440F /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 		426FDABC2366E7C200B6440F /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		43711E72AA3C924FAD7F06A1 /* Pods_Books.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Books.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -86,6 +92,7 @@
 				426FDABE2366EAB900B6440F /* Extensions */,
 				4215F91F236347A10073BEFF /* Assets.xcassets */,
 				4215F924236347A10073BEFF /* Info.plist */,
+				421BD1642371BF960059CECC /* Credentials.plist */,
 			);
 			path = Books;
 			sourceTree = "<group>";
@@ -102,6 +109,8 @@
 			isa = PBXGroup;
 			children = (
 				4215F91A236347A00073BEFF /* ViewController.swift */,
+				4228E4B923730B7B003E0A02 /* SignInViewController.swift */,
+				4225DDA523762466002D35D1 /* MainNavigationController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -144,6 +153,7 @@
 				4215F910236347A00073BEFF /* Frameworks */,
 				4215F911236347A00073BEFF /* Resources */,
 				85CFC3E127CFD649B65F3C17 /* [CP] Embed Pods Frameworks */,
+				1B85110C8C0AE84118EFA174 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -193,6 +203,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4215F923236347A10073BEFF /* LaunchScreen.storyboard in Resources */,
+				421BD1652371BF960059CECC /* Credentials.plist in Resources */,
 				4215F920236347A10073BEFF /* Assets.xcassets in Resources */,
 				4215F91E236347A00073BEFF /* Main.storyboard in Resources */,
 			);
@@ -201,6 +212,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		1B85110C8C0AE84118EFA174 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Books/Pods-Books-resources.sh",
+				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleSignIn.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Books/Pods-Books-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		85CFC3E127CFD649B65F3C17 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -208,10 +237,16 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Books/Pods-Books-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AppAuth/AppAuth.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMAppAuth/GTMAppAuth.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AppAuth.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMAppAuth.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -244,7 +279,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4228E4BA23730B7B003E0A02 /* SignInViewController.swift in Sources */,
 				4215F91B236347A00073BEFF /* ViewController.swift in Sources */,
+				4225DDA623762466002D35D1 /* MainNavigationController.swift in Sources */,
 				426FDABD2366E7C200B6440F /* Extensions.swift in Sources */,
 				4215F917236347A00073BEFF /* AppDelegate.swift in Sources */,
 				421962322364C07300A97E16 /* CustomTableViewCell.swift in Sources */,
@@ -398,7 +435,10 @@
 				DEVELOPMENT_TEAM = RB9B57SJ6S;
 				INFOPLIST_FILE = Books/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.home.Books;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -415,7 +455,10 @@
 				DEVELOPMENT_TEAM = RB9B57SJ6S;
 				INFOPLIST_FILE = Books/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.home.Books;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
