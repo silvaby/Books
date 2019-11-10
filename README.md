@@ -28,6 +28,7 @@ https://developers.google.com/books для поиска и получения с
 5. Run the project using the `Books.xcworkspace` file in Books folder.
 6. Select a simulator iOS device or connect iOS device.
 7. Push "RUN" button. Wait for the app to load in the simulator or device.
-8. Enter a book title in the search bar. Cyrillic available.
-9. Enjoy! You will see the first 40 books (book title, authors, count of pages and picture of a book cover). 📚 
-10. You can enter a book title again.
+8. Push "Sign in" button. Please log in to your Google Account. If you need to log out, click "Cancel" button on the "Main" screen.
+9. Enter a book title in the search bar. Cyrillic available.
+10. Enjoy! You will see the first 40 books (book title, authors, count of pages and picture of a book cover). 📚 
+11. You can enter a book title again.
