@@ -19,6 +19,7 @@
 		4228E4BA23730B7B003E0A02 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4228E4B923730B7B003E0A02 /* SignInViewController.swift */; };
 		426FDAB82366E66900B6440F /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426FDAB72366E66900B6440F /* Book.swift */; };
 		426FDABD2366E7C200B6440F /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426FDABC2366E7C200B6440F /* Extensions.swift */; };
+		42927AD8237B4C3A00734B57 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42927AD7237B4C3A00734B57 /* DetailsViewController.swift */; };
 		A63F43A6DDC7766F42C2B025 /* Pods_Books.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43711E72AA3C924FAD7F06A1 /* Pods_Books.framework */; };
 /* End PBXBuildFile section */
 
@@ -39,6 +40,7 @@
 		4228E4B923730B7B003E0A02 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		426FDAB72366E66900B6440F /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 		426FDABC2366E7C200B6440F /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		42927AD7237B4C3A00734B57 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		43711E72AA3C924FAD7F06A1 /* Pods_Books.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Books.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -108,9 +110,10 @@
 		426FDABA2366E73900B6440F /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				4215F91A236347A00073BEFF /* ViewController.swift */,
 				4228E4B923730B7B003E0A02 /* SignInViewController.swift */,
 				4225DDA523762466002D35D1 /* MainNavigationController.swift */,
+				4215F91A236347A00073BEFF /* ViewController.swift */,
+				42927AD7237B4C3A00734B57 /* DetailsViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -281,6 +284,7 @@
 			files = (
 				4228E4BA23730B7B003E0A02 /* SignInViewController.swift in Sources */,
 				4215F91B236347A00073BEFF /* ViewController.swift in Sources */,
+				42927AD8237B4C3A00734B57 /* DetailsViewController.swift in Sources */,
 				4225DDA623762466002D35D1 /* MainNavigationController.swift in Sources */,
 				426FDABD2366E7C200B6440F /* Extensions.swift in Sources */,
 				4215F917236347A00073BEFF /* AppDelegate.swift in Sources */,

@@ -21,8 +21,10 @@ struct Book: Codable {
 struct VolumeInfo: Codable {
     let title: String?
     let authors: [String]?
+    let description: String?
     let pageCount: Int?
     let imageLinks: ImageLinks?
+    let infoLink: String?
 }
 
 // MARK: - ImageLinks

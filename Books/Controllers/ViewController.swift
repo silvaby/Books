@@ -112,6 +112,35 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
         return cell
     }
     
+    // MARK: - Navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+
+        if let destinationVC: DetailsViewController = segue.destination as? DetailsViewController,
+            let selectedItem = tableView.indexPathForSelectedRow?.item {
+               
+            let volumeInfo = books[selectedItem].volumeInfo
+            
+            // URL of books image
+            if let imageURL = volumeInfo?.imageLinks?.thumbnail {
+                destinationVC.textOfURL = imageURL
+            } else { print("No image link! :(") }
+                
+            // Title of book
+            destinationVC.textOfTitle = volumeInfo?.title ?? "No title! :("
+                
+            // Authors of book
+            let arrayOfAuthors = volumeInfo?.authors
+            let stringOfAuthors = arrayOfAuthors?.joined(separator: ", ")
+            destinationVC.textOfAuthors = stringOfAuthors ?? "No authors! :("
+                
+            // Description of book
+            destinationVC.textOfDescription = volumeInfo?.description ?? "No description! :("
+            
+            // Info link of book
+            destinationVC.textOfInfoLink = volumeInfo?.infoLink ?? "No info link! :("
+        }
+    }
+    
 }
 
 // MARK: - SearchBar
